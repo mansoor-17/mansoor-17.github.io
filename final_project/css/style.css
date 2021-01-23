@@ -1,0 +1,12 @@
+#appLogo {
+    width: 100%;
+    object-fit: cover;
+}
+
+.table-row {
+    cursor: pointer;
+}
+
+#profilePic {
+    max-width: 200px;
+}

@@ -1,0 +1,1155 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="A Robust Application Monitoring System."
+    />
+    <meta name="author" content="Appmon" />
+    <title>Appmon - A Robust Application Monitoring System</title>
+    <!-- Extra details for Live View on GitHub Pages -->
+    <!-- Canonical SEO -->
+    <link rel="canonical" href="https://www.appmon.online/" />
+    <!--  Social tags      -->
+    <meta name="keywords" content="Server, Monitoring, Checks, Http Status" />
+    <meta
+      name="description"
+      content="A Robust Application Monitoring System."
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="../ass   ets/img/brand/favicon.png"
+      type="image/png"
+    />
+    <!-- Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
+    />
+    <!-- Icons -->
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/nucleo/css/nucleo.css"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css"
+      type="text/css"
+    />
+    <!-- Page plugins -->
+    <!-- Argon CSS -->
+    <link
+      rel="stylesheet"
+      href="../assets/css/argon.min.css?v=1.2.0"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="../assets/css/custom.css" type="text/css" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      .tw-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+      }
+      .typewriter-text {
+        /* padding-right: 10px; */
+        color: #172b4d !important;
+        border-right: solid #fb6340 7px;
+        text-transform: uppercase;
+        animation: cursor 1s ease-in-out infinite;
+        font-weight: bold;
+      }
+      @keyframes cursor {
+        from {
+          border-color: #fb6340;
+        }
+        to {
+          border-color: transparent;
+        }
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"
+      type="text/javascript"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav
+      id="navbar-main"
+      class="navbar navbar-horizontal navbar-main navbar-expand-lg navbar-dark bg-gradient-primary"
+    >
+      <div class="container">
+        <a class="navbar-brand" href="./pages/dashboards/dashboard.html">
+          <!-- <img src="../assets/img/brand/white.png"> -->
+          <span class="nav-link navbar-light navbar-text text-white bold"
+            >Appmon</span
+          >
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbar-collapse"
+          aria-controls="navbar-collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="navbar-collapse navbar-custom-collapse collapse"
+          id="navbar-collapse"
+        >
+          <div class="navbar-collapse-header">
+            <div class="row">
+              <div class="col-6 collapse-brand bold">
+                <a href="./pages/dashboards/dashboard.html">
+                  <!-- <img src="../assets/img/brand/blue.png"> -->
+                  <b>Appmon</b>
+                </a>
+              </div>
+              <div class="col-6 collapse-close">
+                <button
+                  type="button"
+                  class="navbar-toggler"
+                  data-toggle="collapse"
+                  data-target="#navbar-collapse"
+                  aria-controls="navbar-collapse"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation"
+                >
+                  <span></span>
+                  <span></span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="#about" class="nav-link">
+                <span class="nav-link-inner--text">About Us</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#highlights" class="nav-link">
+                <span class="nav-link-inner--text">Highlights</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#stats" class="nav-link">
+                <span class="nav-link-inner--text">Why Us</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#features" class="nav-link">
+                <span class="nav-link-inner--text">Features</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">
+                <span class="nav-link-inner--text">Contact Us</span>
+              </a>
+            </li>
+          </ul>
+          <hr class="d-lg-none" />
+          <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-icon"
+                href="https://www.facebook.com/appmon"
+                target="_blank"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="Like us on Facebook"
+              >
+                <i class="fab fa-facebook-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Facebook</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-icon"
+                href="https://www.instagram.com/appmon"
+                target="_blank"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="Follow us on Instagram"
+              >
+                <i class="fab fa-instagram"></i>
+                <span class="nav-link-inner--text d-lg-none">Instagram</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-icon"
+                href="https://twitter.com/appmon"
+                target="_blank"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="Follow us on Twitter"
+              >
+                <i class="fab fa-twitter-square"></i>
+                <span class="nav-link-inner--text d-lg-none">Twitter</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link nav-link-icon"
+                href="https://github.com/appmon"
+                target="_blank"
+                data-toggle="tooltip"
+                title=""
+                data-original-title="Star us on Github"
+              >
+                <i class="fab fa-github"></i>
+                <span class="nav-link-inner--text d-lg-none">Github</span>
+              </a>
+            </li>
+            <li class="nav-item d-none d-lg-block ml-lg-4">
+              <a
+                href="./register.html"
+                target="_blank"
+                class="btn btn-neutral btn-icon"
+              >
+                <span class="btn-inner--icon">
+                  <i class="fas fa-shopping-cart mr-2"></i>
+                </span>
+                <span class="nav-link-inner--text">Sign Up Now</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-------------   Main Content   --------------->
+    <main class="main-content">
+      <!-------------   Header   --------------->
+      <section id="header">
+        <header class="header bg-gradient-primary pt-5 pb-6">
+          <div class="container">
+            <div class="header-body">
+              <div class="row align-items-center justify-content-center py-5">
+                <div class="col-lg-6">
+                  <div class="container">
+                    <div class="tw-container mx-auto">
+                      <h1 class="inline typewriter text-white">
+                        Application System
+                        <span
+                          class="typewriter-text text-center"
+                          data-text='[ "Monitoring. ", "Alerting. ", "Reporting. " ]'
+                        ></span>
+                      </h1>
+                    </div>
+                    <p class="text-white mt-4">
+                      Uptimes are critical. Get notifications on your
+                      application health with comprehensive reports
+                    </p>
+                    <div class="mt-5">
+                      <a href="./login.html" class="btn btn-neutral my-2 px-5"
+                        >Login</a
+                      >
+                      <a
+                        href="./register.html"
+                        class="btn btn-default my-2 px-5"
+                        >Register</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="pr-5 pt-2">
+                    <div class="product-image pt-4 ml-4">
+                      <a href="https://appmon.online" target="_blank">
+                        <img
+                          src="../assets/media/hero/hero-image.png"
+                          alt="Appmon"
+                          class="img-fluid"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="separator separator-bottom separator-skew zindex-100">
+            <svg
+              x="0"
+              y="0"
+              viewBox="0 0 2560 100"
+              preserveAspectRatio="none"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <polygon
+                class="fill-default"
+                points="2560 0 2560 100 0 100"
+              ></polygon>
+            </svg>
+          </div>
+        </header>
+      </section>
+
+      <!--------------- About --------------->
+      <section id="about" class="py-6 pb-9 bg-default">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-md-8">
+              <h2 class="display-3 text-white">
+                A Complete Web Application Monitoring Solution
+              </h2>
+              <p class="lead text-white">
+                Appmon is a completely new product built from MERN Stack
+                framework that is meant to make our products more intuitive,
+                more adaptive and, needless to say, so much easier and intuative
+                for our customers. Let Appmon amaze you with its cool features
+                and build tools and get your Application to a whole new level.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------   Highlights   --------------->
+      <section id="highlights" class="section section-lg pt-lg-0 mt--7">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12">
+              <div class="row">
+                <div class="col-lg-4">
+                  <div class="card card-lift--hover shadow border-0">
+                    <div class="card-body py-5">
+                      <div
+                        class="icon icon-shape bg-gradient-primary text-white rounded-circle mb-4"
+                      >
+                        <i class="ni ni-check-bold"></i>
+                      </div>
+                      <h4 class="h3 text-primary text-uppercase">
+                        Rapid Alerts
+                      </h4>
+                      <p class="description mt-3">
+                        Get Customized Alerts and notifications securely to all
+                        the configured routes and devices
+                      </p>
+                      <div>
+                        <span class="badge badge-pill badge-primary"
+                          >mobile</span
+                        >
+                        <span class="badge badge-pill badge-primary"
+                          >email</span
+                        >
+                        <span class="badge badge-pill badge-primary"
+                          >slack</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card card-lift--hover shadow border-0">
+                    <div class="card-body py-5">
+                      <div
+                        class="icon icon-shape bg-gradient-success text-white rounded-circle mb-4"
+                      >
+                        <i class="ni ni-istanbul"></i>
+                      </div>
+                      <h4 class="h3 text-success text-uppercase">
+                        Intuitive Dashboard
+                      </h4>
+                      <p class="description mt-3">
+                        Get User friendly Exhaustive plots for server metrics
+                        which are both configurable and actionable
+                      </p>
+                      <div>
+                        <span class="badge badge-pill badge-success"
+                          >flash cards</span
+                        >
+                        <span class="badge badge-pill badge-success"
+                          >time series</span
+                        >
+                        <span class="badge badge-pill badge-success"
+                          >spend pattern</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <div class="card card-lift--hover shadow border-0">
+                    <div class="card-body py-5">
+                      <div
+                        class="icon icon-shape bg-gradient-warning text-white rounded-circle mb-4"
+                      >
+                        <i class="ni ni-planet"></i>
+                      </div>
+                      <h4 class="h3 text-warning text-uppercase">
+                        Comprehensive support
+                      </h4>
+                      <p class="description mt-3">
+                        Our Self Help Docs and 24/7 Technical Support team are
+                        always at your service to resolve any issues
+                      </p>
+                      <div>
+                        <span class="badge badge-pill badge-warning"
+                          >self help</span
+                        >
+                        <span class="badge badge-pill badge-warning"
+                          >faq's</span
+                        >
+                        <span class="badge badge-pill badge-warning"
+                          >technician</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------   Stats   --------------->
+      <section id="stats" class="py-5 bg-white overflow-hidden">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+              <h2 class="display-3 text-primary">Why Opt us ?</h2>
+              <p class="lead">
+                We are very delighted to have you here. If you have any
+                suggestions or clarifications please feel free to drop a message
+                and our team will get back to you in no time!
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div
+              class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start"
+            >
+              <img
+                src="../assets/media/details/counts-img.svg"
+                alt=""
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-xl-7 d-flex align-items-stretch pt-4 mt-4">
+              <div class="d-flex flex-column justify-content-center">
+                <div class="row">
+                  <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div
+                      class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                    >
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <h1 class="mr-3 text-white">65</h1>
+                      </div>
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <p>
+                          <strong>Happy Clients</strong> have been engaged with
+                          us ever since our inception
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div
+                      class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                    >
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <h1 class="mr-3 text-white">85</h1>
+                      </div>
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <p>
+                          <strong>Projects</strong> undertaken with flawless
+                          reception
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div
+                      class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                    >
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <h1 class="mr-3 text-white">4</h1>
+                      </div>
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <p>
+                          <strong>Years of Experience</strong> in this journey
+                          to grow our organization root-up to where we are today
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div
+                      class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                    >
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <h1 class="mr-3 text-white">15</h1>
+                      </div>
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <p>
+                          <strong>Awards</strong> to recognize our ever growing
+                          willingness to deliver and help communities all across
+                          the globe
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div
+                      class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                    >
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <h1 class="mr-3 text-white">33.32</h1>
+                      </div>
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <p>
+                          <strong>% Increase in Gross Margin</strong> at an
+                          average with all our clients
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    <div
+                      class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                    >
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <h1 class="mr-3 text-white">8.8 / 10</h1>
+                      </div>
+                      <div class="col-md-12 d-md-flex align-items-md-stretch">
+                        <p>
+                          <strong>Product Rating</strong> Product Rating on
+                          producthunt.com
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End .content-->
+            </div>
+
+            <div class="row py-2">
+              <div class="col-xl-7 d-flex align-items-stretch pt-4 pt-xl-0">
+                <div class="content d-flex flex-column justify-content-center">
+                  <div class="row">
+                    <div class="col-md-6 d-md-flex align-items-md-stretch">
+                      <div
+                        class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                      >
+                        <div class="col-md-12 d-md-flex align-items-md-stretch">
+                          <h1 class="mr-3 text-white">65</h1>
+                        </div>
+                        <div class="col-md-12 d-md-flex align-items-md-stretch">
+                          <p>
+                            <strong>Happy Clients</strong> have been engaged
+                            with us ever since our inception
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 d-md-flex align-items-md-stretch">
+                      <div
+                        class="card bg-gradient-blue text-white card-lift--hover shadow border-0 py-3"
+                      >
+                        <div class="col-md-12 d-md-flex align-items-md-stretch">
+                          <h1 class="mr-3 text-white">85</h1>
+                        </div>
+                        <div class="col-md-12 d-md-flex align-items-md-stretch">
+                          <p>
+                            <strong>Projects</strong> undertaken with flawless
+                            reception
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- End .content-->
+              </div>
+              <div
+                class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-xl-start"
+                data-aos="fade-right"
+                data-aos-delay="150"
+              >
+                <img
+                  src="../assets/media/details/world_wuay.svg"
+                  alt=""
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------   features   --------------->
+      <section id="features" class="py-2">
+        <div class="container pt-4">
+          <div class="row justify-content-center pb-4">
+            <div class="col-lg-8 text-center">
+              <h2 class="display-3 text-primary">Product Features</h2>
+            </div>
+          </div>
+          <div class="row row-grid align-items-center">
+            <div class="col-md-4 order-md-2">
+              <img
+                src="../assets/media/details/details-11.png"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-8 order-md-1">
+              <div class="pr-md-5">
+                <h1>Application Monitoring</h1>
+                <p>
+                  Its very crutial to monitor your servers and websites so that
+                  its available to the users 24X7. Needless to say there
+                  shouldnt be any unplanned outages and applications are
+                  supposed to be up and running providing the same performance
+                  to the customers all the time. With Appmon,
+                </p>
+
+                <div class="card card-translucent shadow border-0">
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Monitor your application servers, websites, Email
+                              Servers
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Get Insights on server's performance
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              First hand view on the peak traffic hitting the
+                              server
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Take actions on server scaling metrics provided
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <p class="mt-5">
+                  With these key features and pro-active monitoring that we
+                  provide, you can prevent application server failures and
+                  thereby delivering your customers upmost satisfaction in your
+                  product
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-4">
+          <div class="row row-grid align-items-center">
+            <div class="col-md-4">
+              <img
+                src="../assets/media/details/details-21.png"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="pr-md-5">
+                <h1>Alerts and Notifications</h1>
+                <p>
+                  Our Rapid Notification System enables our customers to get
+                  notified on their servers in no time
+                </p>
+                <p>
+                  Get Notifications via SMS, Email or any Industry grade
+                  Communication Systems available in the market like slack,
+                  pagerduty, whatsapp. Our easy to configure notification system
+                  allows you to configure any of these without any hassles
+                </p>
+                <div class="card card-translucent shadow border-0">
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Email notification sent to configured Email
+                              Address / Group
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Mobile SMS where texts can be customized
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Slack notifications are integrated and
+                              configurable
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-4">
+          <div class="row row-grid align-items-center">
+            <div class="col-md-4 order-md-2">
+              <img
+                src="../assets/media/details/details-31.png"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-8 order-md-1">
+              <div class="pr-md-5">
+                <h1>Customizable Dashboards</h1>
+                <p>
+                  Configure checks and get highly your dashboard up and running
+                  in no time. Also these dashboards are highly customizable and
+                  interrative and hassle free to interpret.
+                </p>
+                <p>
+                  View all your configured checks in once place with real time
+                  dashboard providing a high level view on checks when are
+                  reporting a downtime and its past occurrances
+                </p>
+                <p>
+                  Checks can also be archived when no longer need and can be
+                  brough back as per need
+                </p>
+                <div class="card card-translucent shadow border-0">
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">Outages over a period of time</h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">Respose time of a check</h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Flexible and configurable dashboards with textual
+                              and graphical representations
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container pt-4">
+          <div class="row row-grid align-items-center">
+            <div class="col-md-4">
+              <img
+                src="../assets/media/details/details-41.png"
+                class="img-fluid"
+              />
+            </div>
+            <div class="col-md-8">
+              <div class="pr-md-5">
+                <h1>24X7 Support</h1>
+                <p>
+                  We provide our privileged customers a 24X7 support, with
+                  response time < 30 mins. Our reliable tech support team have
+                  resolved thousands of customer queries with very good customer
+                  satisfaction levels.
+                </p>
+                <p>
+                  We have an excellent and descriptive written and video logs
+                  for all the features to provide you a step by step guide on
+                  how to set up data points to enable active monitoring
+                </p>
+                <div class="card card-translucent shadow border-0">
+                  <div class="card-body">
+                    <ul class="list-unstyled">
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-settings-gear-65"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Email notification sent to configured Email
+                              Address / Group
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-html5"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Mobile SMS where texts can be customized
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="py-1">
+                        <div class="d-flex align-items-center">
+                          <div>
+                            <div class="badge badge-circle badge-success mr-3">
+                              <i class="ni ni-satisfied"></i>
+                            </div>
+                          </div>
+                          <div>
+                            <h4 class="mb-0">
+                              Slack notifications are integrated and
+                              configurable
+                            </h4>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-------------   Contact Us   --------------->
+      <section id="contact">
+        <div class="bg-primary">
+          <section id="contact">
+            <div class="container py-5">
+              <div class="row justify-content-center pb-4">
+                <div class="col-lg-8 text-center">
+                  <h2 class="display-3 text-white font-weight-bold mb-0">
+                    Contact Us
+                  </h2>
+                </div>
+              </div>
+
+              <div class="row justify-content-center pb-4 my-3">
+                <div class="col-lg-8 text-center">
+                  <a
+                    class="mx-2"
+                    href="https://www.facebook.com/appmon"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    title=""
+                    data-original-title="Like us on Facebook"
+                  >
+                    <i class="fab fa-facebook-square text-white"></i>
+                    <span class="text-white">Facebook</span>
+                  </a>
+                  <a
+                    class="mx-2"
+                    href="https://www.instagram.com/appmon"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    title=""
+                    data-original-title="Follow us on Instagram"
+                  >
+                    <i class="fab fa-instagram text-white"></i>
+                    <span class="text-white">Instagram</span>
+                  </a>
+                  <a
+                    class="mx-2"
+                    href="https://twitter.com/appmon"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    title=""
+                    data-original-title="Follow us on Twitter"
+                  >
+                    <i class="fab fa-twitter-square text-white"></i>
+                    <span class="text-white">Twitter</span>
+                  </a>
+                  <a
+                    class="mx-2"
+                    href="https://github.com/appmon"
+                    target="_blank"
+                    data-toggle="tooltip"
+                    title=""
+                    data-original-title="Star us on Github"
+                  >
+                    <i class="fab fa-github text-white"></i>
+                    <span class="text-white">Github</span>
+                  </a>
+                </div>
+              </div>
+
+              <div class="row justify-content-around">
+                <div class="col-md-6">
+                  <form action="/post" method="post">
+                    <input
+                      class="form-control"
+                      name="name"
+                      placeholder="Name..."
+                    /><br />
+                    <input
+                      class="form-control"
+                      name="phone"
+                      placeholder="Phone..."
+                    /><br />
+                    <input
+                      class="form-control"
+                      name="email"
+                      placeholder="E-mail..."
+                    /><br />
+                    <textarea
+                      class="form-control"
+                      name="text"
+                      placeholder="How can we help you?"
+                      style="height: 150px"
+                    ></textarea
+                    ><br />
+                    <div class="btn-wrapper">
+                      <a
+                        href="https://www.apmon.online"
+                        class="btn btn-default btn-block btn-icon mb-3 mb-sm-0"
+                      >
+                        <span class="btn-inner--icon"
+                          ><i class="ni ni-basket"></i
+                        ></span>
+                        <span class="btn-inner--text">Contact Us</span>
+                      </a>
+                    </div>
+                    <br />
+                  </form>
+                </div>
+                <div class="col-md-4 text-dark">
+                  <div class="card card-profile-stats shadow border-0">
+                    <div class="card-body py-3">
+                      <h4 class="h3 text-dark text-uppercase">
+                        Customer service
+                      </h4>
+                      <ul class="list-unstyled">
+                        <li>Phone: +1 024 420 024</li>
+                        <li>
+                          E-mail:
+                          <a href="mailto:support@appmon.site"
+                            >support@appmon.online</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card card-profile-stats shadow border-0">
+                    <div class="card-body py-3">
+                      <h4 class="h3 text-dark text-uppercase">Headquarters</h4>
+                      <ul class="list-unstyled">
+                        <li>Appmon Ptv India Ltd</li>
+                        <li>The Hacking School</li>
+                        <li>Hyderabad, India,</li>
+                        <li>Phone: +1 420 400 200</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-------------   Footer   --------------->
+    <div id="footer" class="bg-dark">
+      <footer class="py-4">
+        <div class="container">
+          <div class="row align-items-center justify-content-xl-between">
+            <div class="col-xl-6">
+              <div class="copyright text-center text-xl-left text-muted">
+                &copy; 2020
+                <a
+                  href="https://www.appmon.online"
+                  class="font-weight-bold ml-1"
+                  target="_blank"
+                  >Appmon</a
+                >
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <ul
+                class="nav nav-footer justify-content-center justify-content-xl-end"
+              >
+                <li class="nav-item">
+                  <a href="#about" class="nav-link" target="_blank">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a href="#features" class="nav-link" target="_blank"
+                    >Features</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a href="#contact" class="nav-link" target="_blank"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script>
+      $(document).ready(function () {
+        typing(0, $(".typewriter-text").data("text"));
+        function typing(index, text) {
+          var textIndex = 1;
+
+          var tmp = setInterval(function () {
+            if (textIndex < text[index].length + 1) {
+              $(".typewriter-text").text(text[index].substr(0, textIndex));
+              textIndex++;
+            } else {
+              setTimeout(function () {
+                deleting(index, text);
+              }, 2000);
+              clearInterval(tmp);
+            }
+          }, 150);
+        }
+
+        function deleting(index, text) {
+          var textIndex = text[index].length;
+
+          var tmp = setInterval(function () {
+            if (textIndex + 1 > 0) {
+              $(".typewriter-text").text(text[index].substr(0, textIndex));
+              textIndex--;
+            } else {
+              index++;
+              if (index == text.length) {
+                index = 0;
+              }
+              typing(index, text);
+              clearInterval(tmp);
+            }
+          }, 150);
+        }
+      });
+    </script>
+    <!-- Argon Scripts -->
+    <!-- Core -->
+    <script src="../assets/vendor/jquery/dist/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/js-cookie/js.cookie.js"></script>
+    <script src="../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+    <!-- Optional JS -->
+    <script src="../assets/vendor/onscreen/dist/on-screen.umd.min.js"></script>
+    <!-- Argon JS -->
+    <script src="../assets/js/argon.min.js?v=1.2.0"></script>
+    <!-- Demo JS - remove this in your project -->
+    <!-- <script src="../assets/js/demo.min.js"></script> -->
+  </body>
+</html>
