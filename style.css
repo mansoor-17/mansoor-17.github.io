@@ -45,6 +45,18 @@ body {
   margin-top: 1vh;
 }
 
+#download {
+  margin-top: 2rem;
+  background-color: white;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .rs-range {
   margin-top: 29px;
   width: 70vw;
