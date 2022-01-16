@@ -1,4 +1,5 @@
-document.getElementById("download").addEventListener("click", () => {
+document.getElementById("form-download").addEventListener("submit", (e) => {
+  e.preventDefault();
   toggleModal();
   // htmlToImage
   //   .toPng(document.getElementById("capture"))
@@ -6,10 +7,12 @@ document.getElementById("download").addEventListener("click", () => {
   //     saveAs(dataUrl, "iced.png");
   //   });
 });
-document.getElementById("closeModal").addEventListener("click", () => {
+document.getElementById("closeModal").addEventListener("click", (e) => {
+  e.preventDefault();
   toggleModal();
 });
-document.getElementById("final-download").addEventListener("click", () => {
+document.getElementById("final-download").addEventListener("submit", (e) => {
+  e.preventDefault();
   htmlToImage
     .toPng(document.getElementById("capture"))
     .then(function (dataUrl) {

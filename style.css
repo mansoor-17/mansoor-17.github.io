@@ -1,16 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
 
+html,
+body {
+  height: 100%;
+  background-color: #fff;
+  font-family: "Noto Sans", sans-serif;
+  color: #000;
+  /* background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat; */
+}
+
 #capture {
-  height: 100vh;
-  background-color: #000;
+  background-color: #fff;
+
+  /* background-color: #000;
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat;
+  background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat; */
 }
 
 .main-container {
+  margin-top: 50px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -19,16 +33,21 @@
 }
 
 .box-minmax {
-  margin-top: 30px;
-  width: 70vw;
+  margin-top: 10px;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
-  font-size: 20px;
-  color: #ffffff;
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 .box-minmax span:first-child {
   margin-left: 10px;
 }
+
+.emptySpace {
+  height: 100px;
+}
+
 @media screen and (max-width: 576px) {
   .box-minmax {
     font-size: small;
@@ -37,7 +56,6 @@
 
 .main-container p {
   text-align: center;
-  color: #ffffff;
   font-weight: 300;
 }
 
@@ -47,7 +65,7 @@
 
 #download {
   margin-top: 2rem;
-  background-color: white;
+  background-color: #fae102;
   border: none;
   color: black;
   padding: 15px 32px;
@@ -59,8 +77,9 @@
 
 .rs-range {
   margin-top: 29px;
-  width: 70vw;
+  width: 60vw;
   -webkit-appearance: none;
+  background: #000000;
 }
 .rs-range:focus {
   outline: none;
@@ -70,7 +89,7 @@
   height: 1px;
   cursor: pointer;
   box-shadow: none;
-  background: #ffffff;
+  background: #000000;
   border-radius: 0px;
   border: 0px solid #010101;
 }
@@ -79,7 +98,7 @@
   height: 1px;
   cursor: pointer;
   box-shadow: none;
-  background: #ffffff;
+  background: #000000;
   border-radius: 0px;
   border: 0px solid #010101;
 }
@@ -87,25 +106,25 @@
   box-shadow: none;
   border: 0px solid #ffffff;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  height: 42px;
-  width: 22px;
+  height: 22px;
+  width: 12px;
   border-radius: 22px;
-  background: white;
+  background: #fae102;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 .rs-range::-moz-range-thumb {
   box-shadow: none;
   border: 0px solid #ffffff;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  height: 42px;
-  width: 22px;
+  height: 22px;
+  width: 12px;
   border-radius: 22px;
-  background: white;
+  background: #fae102;
   cursor: pointer;
   -webkit-appearance: none;
-  margin-top: -20px;
+  margin-top: -10px;
 }
 .rs-range::-moz-focus-outer {
   border: 0;
