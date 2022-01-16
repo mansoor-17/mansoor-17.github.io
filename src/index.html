@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create your ICED Score</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="out.css" />
+    <script src="https://unpkg.com/html-to-image"></script>
+  </head>
+  <body>
+    <div id="capture">
+      <div class="main-container">
+        <div class="flex items-center py-2 mb-6">
+          <label
+            class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+            for="grid-first-name"
+          >
+            Product Name
+          </label>
+          <input
+            class="appearance-none bg-transparent w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-teal-500"
+            type="text"
+            placeholder="Enter Product Name Here "
+            aria-label="Product Name"
+          />
+        </div>
+        <div>
+          <p>I</p>
+          <div class="range-slider">
+            <input
+              id="rs-range-line"
+              class="rs-range"
+              type="range"
+              value="100"
+              min="0"
+              max="200"
+            />
+          </div>
+          <div class="box-minmax">
+            <span>Infrequent</span><span>Frequent</span>
+          </div>
+        </div>
+        <div>
+          <p>C</p>
+          <div class="range-slider">
+            <input
+              id="rs-range-line"
+              class="rs-range"
+              type="range"
+              value="100"
+              min="0"
+              max="200"
+            />
+          </div>
+          <div class="box-minmax">
+            <span>No Control</span><span>Control</span>
+          </div>
+        </div>
+        <div>
+          <p>E</p>
+          <div class="range-slider">
+            <input
+              id="rs-range-line"
+              class="rs-range"
+              type="range"
+              value="100"
+              min="0"
+              max="200"
+            />
+          </div>
+          <div class="box-minmax">
+            <span>Low Engagement</span><span>High Engagement</span>
+          </div>
+        </div>
+        <div>
+          <p>D</p>
+          <div class="range-slider">
+            <input
+              id="rs-range-line"
+              class="rs-range"
+              type="range"
+              value="100"
+              min="0"
+              max="200"
+            />
+          </div>
+          <div class="box-minmax">
+            <span>Not Distinctive</span><span>Distinctive</span>
+          </div>
+        </div>
+        <div><input type="button" id="download" value="Download Score" /></div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <div
+      class="hidden fixed z-10 inset-0 overflow-y-auto"
+      id="modal"
+      aria-labelledby="modal-title"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div
+        class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+      >
+        <div
+          class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity"
+          aria-hidden="true"
+        ></div>
+        <span
+          class="hidden sm:inline-block sm:align-middle sm:h-screen"
+          aria-hidden="true"
+          >&#8203;</span
+        >
+        <div
+          class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full"
+        >
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+            <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+              <form class="bg-white px-8 pt-6 pb-8 mb-4">
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Name
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="productName"
+                    type="text"
+                    placeholder="Name"
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="username"
+                  >
+                    Email
+                  </label>
+                  <input
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="productName"
+                    type="text"
+                    placeholder="abc@gmail.com"
+                  />
+                </div>
+                <div class="flex items-center justify-between">
+                  <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="button"
+                    id="final-download"
+                  >
+                    Download
+                  </button>
+                  <button
+                    class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+                    id="closeModal"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
+<!-- 
+  Modal
+
+
+ <div class="hidden fixed z-10 inset-0 overflow-y-auto"  id="modal" aria-labelledby="modal-title" role="dialog" aria-modal="true">
+      <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+ 
+        <div class="fixed inset-0 bg-gray-500 bg-opacity-75 transition-opacity" aria-hidden="true"></div>
+        <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">&#8203;</span>
+        <div class="inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" >
+          <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+              <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                <form class="bg-white px-8 pt-6 pb-8 mb-4">
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                     Name
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productName" type="text" placeholder="Name">
+                  </div>
+                  <div class="mb-4">
+                    <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                      Email
+                    </label>
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="productName" type="text" placeholder="abc@gmail.com">
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button" id="final-download">
+                      Download
+                    </button>
+                    <button class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" id="closeModal">
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+               
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+
+
+
+
+ -->
