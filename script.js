@@ -11,7 +11,7 @@ document.getElementById("form-download").addEventListener("submit", (e) => {
 document.getElementById("grid-first-name").addEventListener("input", (e) => {
   document.getElementById(
     "title"
-  ).innerText = `Iced Score for ${e.target.value}`;
+  ).innerText = `ICED Theory Canvas - ${e.target.value}`;
 });
 document.getElementById("closeModal").addEventListener("click", (e) => {
   e.preventDefault();
@@ -21,6 +21,14 @@ document.getElementById("final-download").addEventListener("submit", (e) => {
   e.preventDefault();
   toggleDisplayDownloadButton();
   toggleTitle();
+  const user = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const dataToSend = { user, email };
+  console.log(dataToSend);
+  fetch("https://formspree.io/f/xdobkybg", {
+    method: "POST",
+    body: JSON.stringify(dataToSend),
+  });
   htmlToImage
     .toPng(document.getElementById("capture"))
     .then(function (dataUrl) {

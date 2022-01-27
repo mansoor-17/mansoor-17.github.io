@@ -12,7 +12,7 @@
   clip-path: inset(50%);
 }
 
-input[type="range"] {
+input[type=range] {
   grid-column: 1;
   grid-row: 2;
   margin: 0;
@@ -23,28 +23,28 @@ input[type="range"] {
   /* fix too small font-size in both Chrome & Firefox */
   pointer-events: none;
 }
-input[type="range"]::-webkit-slider-runnable-track,
-input[type="range"]::-webkit-slider-thumb,
-input[type="range"] {
+input[type=range]::-webkit-slider-runnable-track, input[type=range]::-webkit-slider-thumb, input[type=range] {
   -webkit-appearance: none;
 }
-input[type="range"]::-webkit-slider-runnable-track {
+input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
 }
-input[type="range"]::-moz-range-track {
+input[type=range]::-moz-range-track {
   width: 100%;
 }
-input[type="range"]::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   width: 4em;
   height: 4em;
   background: currentcolor;
   pointer-events: auto;
+  z-index: 9999;
 }
-input[type="range"]::-moz-range-thumb {
+input[type=range]::-moz-range-thumb {
   width: 4em;
   height: 4em;
   background: currentcolor;
   pointer-events: auto;
+  z-index: 9999;
 }
 
 #a:focus {
@@ -52,7 +52,7 @@ input[type="range"]::-moz-range-thumb {
 }
 #a::-webkit-slider-runnable-track {
   width: 100%;
-  height: 1px;
+  height: 0px;
   cursor: pointer;
   box-shadow: none;
   background: #000000;
@@ -61,7 +61,7 @@ input[type="range"]::-moz-range-thumb {
 }
 #a::-moz-range-track {
   width: 100%;
-  height: 1px;
+  height: 0px;
   cursor: pointer;
   box-shadow: none;
   background: #000000;
@@ -79,6 +79,7 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -10px;
+  z-index: 9999;
 }
 #a::-moz-range-thumb {
   box-shadow: none;
@@ -91,6 +92,7 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -10px;
+  z-index: 9999;
 }
 #a::-moz-focus-outer {
   border: 0;
@@ -101,7 +103,7 @@ input[type="range"]::-moz-range-thumb {
 }
 #b::-webkit-slider-runnable-track {
   width: 100%;
-  height: 1px;
+  height: 0px;
   cursor: pointer;
   box-shadow: none;
   border-radius: 0px;
@@ -109,7 +111,7 @@ input[type="range"]::-moz-range-thumb {
 }
 #b::-moz-range-track {
   width: 100%;
-  height: 1px;
+  height: 0px;
   cursor: pointer;
   box-shadow: none;
   background: #000000;
@@ -127,6 +129,7 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -10px;
+  z-index: 9999;
 }
 #b::-moz-range-thumb {
   box-shadow: none;
@@ -139,6 +142,7 @@ input[type="range"]::-moz-range-thumb {
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -10px;
+  z-index: 9999;
 }
 #b::-moz-focus-outer {
   border: 0;
