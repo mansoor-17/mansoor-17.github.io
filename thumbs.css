@@ -12,7 +12,7 @@
   clip-path: inset(50%);
 }
 
-input[type=range] {
+input[type="range"] {
   grid-column: 1;
   grid-row: 2;
   margin: 0;
@@ -23,22 +23,24 @@ input[type=range] {
   /* fix too small font-size in both Chrome & Firefox */
   pointer-events: none;
 }
-input[type=range]::-webkit-slider-runnable-track, input[type=range]::-webkit-slider-thumb, input[type=range] {
+input[type="range"]::-webkit-slider-runnable-track,
+input[type="range"]::-webkit-slider-thumb,
+input[type="range"] {
   -webkit-appearance: none;
 }
-input[type=range]::-webkit-slider-runnable-track {
+input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
 }
-input[type=range]::-moz-range-track {
+input[type="range"]::-moz-range-track {
   width: 100%;
 }
-input[type=range]::-webkit-slider-thumb {
+input[type="range"]::-webkit-slider-thumb {
   width: 4em;
   height: 4em;
   background: currentcolor;
   pointer-events: auto;
 }
-input[type=range]::-moz-range-thumb {
+input[type="range"]::-moz-range-thumb {
   width: 4em;
   height: 4em;
   background: currentcolor;

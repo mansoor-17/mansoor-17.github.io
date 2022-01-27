@@ -14,24 +14,15 @@
     <div id="capture">
       <form id="form-download">
         <div class="main-container">
-          <div class="flex items-center py-2 mb-6">
-            <label
-              class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-              for="grid-first-name"
-            >
-              Product Name
-            </label>
-            <input
-              class="appearance-none bg-transparent w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none border-b border-[#fae102]"
-              type="text"
-              placeholder="Enter Product Name Here "
-              aria-label="Product Name"
-              required
-            />
+          <div class="title-container">
+            <h1 id="title" class="hidden">
+              Iced Score for the A Very Large Product Name Given Here
+            </h1>
           </div>
           <div>
             <p>Frequency</p>
             <div class="range-slider wrap">
+              <div class="line"></div>
               <input
                 id="a"
                 type="range"
@@ -179,9 +170,27 @@
             <div class="box-minmax"><span>Low</span><span>High</span></div>
           </div>
 
-          <div>
-            <input type="submit" id="download" value="Download Score" />
+          <div id="product-desc" class="flex items-center py-2 mb-6 mt-2">
+            <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+              <label
+                class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+                for="grid-first-name"
+              >
+                Product Name
+              </label>
+              <input
+                class="appearance-none block w-full bg-gray-200 text-gray-700 border-b border-[#fae102] rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white"
+                id="grid-first-name"
+                type="text"
+                placeholder="Product Name Here"
+                required
+              />
+            </div>
+            <div>
+              <input type="submit" id="download" value="Download Score" />
+            </div>
           </div>
+
           <div class="emptySpace"></div>
         </div>
       </form>

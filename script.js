@@ -7,21 +7,39 @@ document.getElementById("form-download").addEventListener("submit", (e) => {
   //     saveAs(dataUrl, "iced.png");
   //   });
 });
+
+document.getElementById("grid-first-name").addEventListener("input", (e) => {
+  document.getElementById(
+    "title"
+  ).innerText = `Iced Score for ${e.target.value}`;
+});
 document.getElementById("closeModal").addEventListener("click", (e) => {
   e.preventDefault();
   toggleModal();
 });
 document.getElementById("final-download").addEventListener("submit", (e) => {
   e.preventDefault();
+  toggleDisplayDownloadButton();
+  toggleTitle();
   htmlToImage
     .toPng(document.getElementById("capture"))
     .then(function (dataUrl) {
       saveAs(dataUrl, "iced.png");
+      toggleDisplayDownloadButton();
+      toggleTitle();
     });
 });
 
+function toggleDisplayDownloadButton() {
+  document.getElementById("product-desc").classList.toggle("hidden");
+}
+
 function toggleModal() {
   document.getElementById("modal").classList.toggle("hidden");
+}
+
+function toggleTitle() {
+  document.getElementById("title").classList.toggle("hidden");
 }
 
 function saveAs(uri, filename) {

@@ -21,15 +21,31 @@ body {
   font-family: "Roboto", sans-serif;
   background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat; */
 }
+.line {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #000000;
+  top: 50%;
+  z-index: 1;
+}
 
 .main-container {
-  margin-top: 50px;
-  margin-bottom: 100px;
+  margin: 50px 10% 100px 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+.title-container {
+  width: 60vw;
+}
+#title {
+  align-self: flex-start;
+  font-size: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
 }
 
 .box-minmax {
@@ -64,11 +80,11 @@ body {
 }
 
 #download {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
   background-color: #fae102;
   border: none;
   color: black;
-  padding: 15px 32px;
+  padding: 10px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -86,7 +102,7 @@ body {
 }
 .rs-range::-webkit-slider-runnable-track {
   width: 100%;
-  height: 1px;
+  height: 0px;
   cursor: pointer;
   box-shadow: none;
   background: #000000;
@@ -95,7 +111,7 @@ body {
 }
 .rs-range::-moz-range-track {
   width: 100%;
-  height: 1px;
+  height: 0px;
   cursor: pointer;
   box-shadow: none;
   background: #000000;
