@@ -11,32 +11,22 @@ body {
   background-color: #fff;
   font-family: "Noto Sans", sans-serif;
   color: #000;
-  /* background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat; */
+  margin: auto;
 }
-
 #capture {
   background-color: #fff;
-
-  /* background-color: #000;
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(180deg, #db302a 0%, #62186b 100%) no-repeat; */
 }
-.line {
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background-color: #000000;
-  top: 50%;
-  z-index: 1;
-}
-
 .main-container {
   margin: 50px 10% 100px 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
+}
+canvas {
+  background-color: #ffffff;
+  min-height: 50vh;
+  max-height: 80vh;
 }
 .title-container {
   width: 60vw;
@@ -74,11 +64,6 @@ body {
   text-align: center;
   font-weight: 300;
 }
-
-.range-slider {
-  margin-top: 1vh;
-}
-
 #download {
   /* margin-top: 2rem; */
   background-color: #fae102;
@@ -90,60 +75,3 @@ body {
   display: inline-block;
   font-size: 16px;
 }
-
-.rs-range {
-  margin-top: 29px;
-  width: 60vw;
-  -webkit-appearance: none;
-  background: #000000;
-}
-.rs-range:focus {
-  outline: none;
-}
-.rs-range::-webkit-slider-runnable-track {
-  width: 100%;
-  height: 0px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #000000;
-  border-radius: 0px;
-  border: 0px solid #010101;
-}
-.rs-range::-moz-range-track {
-  width: 100%;
-  height: 0px;
-  cursor: pointer;
-  box-shadow: none;
-  background: #000000;
-  border-radius: 0px;
-  border: 0px solid #010101;
-}
-.rs-range::-webkit-slider-thumb {
-  box-shadow: none;
-  border: 0px solid #ffffff;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  height: 22px;
-  width: 12px;
-  border-radius: 22px;
-  background: #fae102;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -10px;
-}
-.rs-range::-moz-range-thumb {
-  box-shadow: none;
-  border: 0px solid #ffffff;
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
-  height: 22px;
-  width: 12px;
-  border-radius: 22px;
-  background: #fae102;
-  cursor: pointer;
-  -webkit-appearance: none;
-  margin-top: -10px;
-}
-.rs-range::-moz-focus-outer {
-  border: 0;
-}
-
-/*# sourceMappingURL=style.css.map */

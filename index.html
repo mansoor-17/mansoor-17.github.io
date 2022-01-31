@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create your ICED Score</title>
-    <link rel="stylesheet" href="thumbs.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="out.css" />
+    <script src="https://unpkg.com/html-to-image"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.6.0/chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-dragdata@2.2.3/dist/chartjs-plugin-dragdata.min.js"></script>
     <script src="https://unpkg.com/html-to-image"></script>
   </head>
   <body>
@@ -19,162 +21,10 @@
               Iced Score for the A Very Large Product Name Given Here
             </h1>
           </div>
-          <div>
-            <p>Frequency</p>
-            <div class="range-slider wrap">
-              <div class="line"></div>
-              <input
-                id="a"
-                type="range"
-                min="-50"
-                value="-30"
-                max="50"
-                class="range"
-              />
-              <output class="bubble current">Current</output>
-              <input
-                id="b"
-                type="range"
-                min="-50"
-                value="20"
-                max="50"
-                class="range"
-              />
-              <output class="bubble new">New</output>
-            </div>
-            <div class="box-minmax"><span>Low</span><span>High</span></div>
-          </div>
-
-          <div>
-            <p>Control Over Experience</p>
-            <div class="range-slider wrap">
-              <div class="line"></div>
-              <input
-                id="a"
-                type="range"
-                min="-50"
-                value="-30"
-                max="50"
-                class="range rs-range"
-              />
-              <output class="bubble current">Current</output>
-              <input
-                id="b"
-                type="range"
-                min="-50"
-                value="20"
-                max="50"
-                class="range"
-              />
-              <output class="bubble new">New</output>
-            </div>
-            <div class="box-minmax"><span>Low</span><span>High</span></div>
-          </div>
-
-          <div>
-            <p>Managing Complexity</p>
-            <div class="range-slider wrap">
-              <div class="line"></div>
-              <input
-                id="a"
-                type="range"
-                min="-50"
-                value="-30"
-                max="50"
-                class="range"
-              />
-              <output class="bubble current">Current</output>
-              <input
-                id="b"
-                type="range"
-                min="-50"
-                value="20"
-                max="50"
-                class="range"
-              />
-              <output class="bubble new">New</output>
-            </div>
-            <div class="box-minmax"><span>Low</span><span>High</span></div>
-          </div>
-
-          <div>
-            <p>Extent of touch</p>
-            <div class="range-slider wrap">
-              <div class="line"></div>
-              <input
-                id="a"
-                type="range"
-                min="-50"
-                value="-30"
-                max="50"
-                class="range"
-              />
-              <output class="bubble current">Current</output>
-              <input
-                id="b"
-                type="range"
-                min="-50"
-                value="20"
-                max="50"
-                class="range"
-              />
-              <output class="bubble new">New</output>
-            </div>
-            <div class="box-minmax"><span>Low</span><span>High</span></div>
-          </div>
-
-          <div>
-            <p>Strength of hierarchy of engagement</p>
-            <div class="range-slider wrap">
-              <div class="line"></div>
-              <input
-                id="a"
-                type="range"
-                min="-50"
-                value="-30"
-                max="50"
-                class="range"
-              />
-              <output class="bubble current">Current</output>
-              <input
-                id="b"
-                type="range"
-                min="-50"
-                value="20"
-                max="50"
-                class="range"
-              />
-              <output class="bubble new">New</output>
-            </div>
-            <div class="box-minmax"><span>Low</span><span>High</span></div>
-          </div>
-
-          <div>
-            <p>Distinctive</p>
-            <div class="range-slider wrap">
-              <div class="line"></div>
-              <input
-                id="a"
-                type="range"
-                min="-50"
-                value="-30"
-                max="50"
-                class="range"
-              />
-              <output class="bubble current">Current</output>
-              <input
-                id="b"
-                type="range"
-                min="-50"
-                value="20"
-                max="50"
-                class="range"
-              />
-              <output class="bubble new">New</output>
-            </div>
-            <div class="box-minmax"><span>Low</span><span>High</span></div>
-          </div>
-
+          <canvas
+            id="chartJSContainer"
+            style="height: 90%; width: 90%"
+          ></canvas>
           <div id="product-desc" class="flex items-center py-2 mb-6 mt-2">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
               <label

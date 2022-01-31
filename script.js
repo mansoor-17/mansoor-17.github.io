@@ -1,11 +1,6 @@
 document.getElementById("form-download").addEventListener("submit", (e) => {
   e.preventDefault();
   toggleModal();
-  // htmlToImage
-  //   .toPng(document.getElementById("capture"))
-  //   .then(function (dataUrl) {
-  //     saveAs(dataUrl, "iced.png");
-  //   });
 });
 
 document.getElementById("grid-first-name").addEventListener("input", (e) => {
@@ -63,29 +58,140 @@ function saveAs(uri, filename) {
   }
 }
 
-const allSliders = document.querySelectorAll(".range-slider");
-allSliders.forEach((ranges) => {
-  const sliders = ranges.querySelectorAll(".range");
-  let s1 = sliders[0];
-  let current = ranges.querySelector(".current");
-  let s2 = sliders[1];
-  let news = ranges.querySelector(".new");
-  s1.addEventListener("input", () => {
-    setBubble(s1, current);
-  });
-  setBubble(s1, current);
-  s2.addEventListener("input", () => {
-    setBubble(s2, news);
-  });
-  setBubble(s2, news);
-});
+var yLabels = {
+  0: "",
+  2: "Low",
+  4: "",
+  6: "",
+  8: "",
+  10: "Medium",
+  12: "",
+  14: "",
+  16: "",
+  18: "High",
+  20: "",
+};
 
-function setBubble(range, bubble) {
-  const val = range.value;
-  const min = range.min ? range.min : 0;
-  const max = range.max ? range.max : 100;
-  const newVal = Number(((val - min) * 100) / (max - min));
+var options = {
+  type: "line",
+  data: {
+    labels: [
+      "Frequency",
+      "Control Over Experience",
+      "Managing Complexity",
+      "Extent of Touch",
+      "Strength of hierarchy of engagement",
+      "Distinctive",
+    ],
+    datasets: [
+      {
+        label: "Current",
+        data: [4, 4, 4, 4, 4, 4],
+        fill: false,
+        tension: 0.1,
+        borderColor: "rgb(15,153,52,60)",
+        backgroundColor: "rgb(15,153,52,60)",
+        borderWidth: 4,
+      },
+      {
+        label: "New",
+        data: [16, 16, 16, 16, 16, 16],
+        fill: false,
+        tension: 0.1,
+        borderColor: "rgb(5,68,240,94)",
+        backgroundColor: "rgb(5,68,240,94)",
+        borderWidth: 4,
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        min: 0,
+        max: 20,
+        ticks: {
+          callback: function (value, index, values) {
+            return yLabels[value];
+          },
+        },
+        grid: {
+          display: false,
+        },
+      },
+      // x: [
+      //   {
+      //     id: "main",
+      //     ticks: {
+      //       callback: function (label) {
+      //         return label;
+      //       },
+      //     },
+      //   },
+      //   {
+      //     id: "secondary",
+      //     ticks: {
+      //       callback: function (label) {
+      //         if (label === "Extent of touch") {
+      //           return "Engagement";
+      //         } else {
+      //           return "";
+      //         }
+      //       },
+      //     },
+      //   },
+      // ],
+      x: {
+        id: "main",
+        align: "center",
+      },
+      xAxis2: {
+        offset: true,
+        grid: {
+          drawOnChartArea: false, // only want the grid lines for one axis to show up
+        },
+        ticks: {
+          callback: function (label) {
+            let realLabel = this.getLabelForValue(label);
+            if (
+              realLabel === "Extent of Touch" ||
+              realLabel === "Managing Complexity" ||
+              realLabel === "Extent of Touch"
+            ) {
+              return "Engagement";
+            }
+          },
+        },
+      },
+    },
+    onHover: function (e) {
+      const point = e.chart.getElementsAtEventForMode(
+        e,
+        "nearest",
+        { intersect: true },
+        false
+      );
+      if (point.length) e.native.target.style.cursor = "grab";
+      else e.native.target.style.cursor = "default";
+    },
+    plugins: {
+      dragData: {
+        round: 1,
+        showTooltip: true,
+        onDragStart: function (e, datasetIndex, index, value) {
+          // console.log(e)
+        },
+        onDrag: function (e, datasetIndex, index, value) {
+          e.target.style.cursor = "grabbing";
+          // console.log(e, datasetIndex, index, value)
+        },
+        onDragEnd: function (e, datasetIndex, index, value) {
+          e.target.style.cursor = "default";
+          // console.log(datasetIndex, index, value)
+        },
+      },
+    },
+  },
+};
 
-  // Sorta magic numbers based on size of the native UI thumb
-  bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
-}
+var ctx = document.getElementById("chartJSContainer").getContext("2d");
+window.test = new Chart(ctx, options);
