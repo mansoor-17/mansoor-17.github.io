@@ -6,7 +6,7 @@ document.getElementById("form-download").addEventListener("submit", (e) => {
 document.getElementById("grid-first-name").addEventListener("input", (e) => {
   document.getElementById(
     "title"
-  ).innerText = `ICED Theory Canvas - ${e.target.value}`;
+  ).innerText = `ICED Theory Canvas for ${e.target.value}`;
 });
 document.getElementById("closeModal").addEventListener("click", (e) => {
   e.preventDefault();
@@ -78,15 +78,31 @@ var options = {
     labels: [
       "Frequency",
       "Control Over Experience",
-      "Managing Complexity",
-      "Extent of Touch",
-      "Strength of hierarchy of engagement",
+      {
+        label: "Enagagement",
+        expand: true,
+        children: [
+          "Managing Complexity",
+          "Extent of Touch",
+          "Strength of hierarchy of engagement",
+        ],
+      },
+
       "Distinctive",
     ],
     datasets: [
       {
         label: "Current",
-        data: [4, 4, 4, 4, 4, 4],
+        // data: [4, 4, 4, 4, 4, 4],
+        tree: [
+          4,
+          4,
+          {
+            value: 4,
+            children: [4, 4, 4],
+          },
+          4,
+        ],
         fill: false,
         tension: 0.1,
         borderColor: "rgb(15,153,52,60)",
@@ -95,7 +111,16 @@ var options = {
       },
       {
         label: "New",
-        data: [16, 16, 16, 16, 16, 16],
+        // data: [16, 16, 16, 16, 16, 16],
+        tree: [
+          16,
+          16,
+          {
+            value: 16,
+            children: [16, 16, 16],
+          },
+          16,
+        ],
         fill: false,
         tension: 0.1,
         borderColor: "rgb(5,68,240,94)",
@@ -105,7 +130,20 @@ var options = {
     ],
   },
   options: {
+    layout: {
+      padding: {
+        bottom: 30,
+      },
+    },
     scales: {
+      x: {
+        type: "hierarchical",
+        static: true,
+        hierarchyGroupLabelPosition: "center",
+        grid: {
+          display: false,
+        },
+      },
       y: {
         min: 0,
         max: 20,
@@ -116,50 +154,6 @@ var options = {
         },
         grid: {
           display: false,
-        },
-      },
-      // x: [
-      //   {
-      //     id: "main",
-      //     ticks: {
-      //       callback: function (label) {
-      //         return label;
-      //       },
-      //     },
-      //   },
-      //   {
-      //     id: "secondary",
-      //     ticks: {
-      //       callback: function (label) {
-      //         if (label === "Extent of touch") {
-      //           return "Engagement";
-      //         } else {
-      //           return "";
-      //         }
-      //       },
-      //     },
-      //   },
-      // ],
-      x: {
-        id: "main",
-        align: "center",
-      },
-      xAxis2: {
-        offset: true,
-        grid: {
-          drawOnChartArea: false, // only want the grid lines for one axis to show up
-        },
-        ticks: {
-          callback: function (label) {
-            let realLabel = this.getLabelForValue(label);
-            if (
-              realLabel === "Extent of Touch" ||
-              realLabel === "Managing Complexity" ||
-              realLabel === "Extent of Touch"
-            ) {
-              return "Engagement";
-            }
-          },
         },
       },
     },
@@ -174,6 +168,9 @@ var options = {
       else e.native.target.style.cursor = "default";
     },
     plugins: {
+      legend: {
+        align: "end",
+      },
       dragData: {
         round: 1,
         showTooltip: true,
